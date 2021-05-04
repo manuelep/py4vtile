@@ -17,7 +17,7 @@ setuptools.setup(
     },
     classifiers=[
         "Programming Language :: Python :: 3",
-        "Framework :: Py4web",
+        # "Framework :: Py4web",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
