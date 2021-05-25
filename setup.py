@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="py4vtile",
-    version="0.0.1",
+    version="0.0.2",
     author="Manuele Pesenti",
     author_email="manuele@inventati.org",
     description="Tools that helps you to develop web service for distributing vector tiles.",
@@ -31,7 +31,7 @@ setuptools.setup(
         "shapely",
         "mercantile",
         "pyproj",
-        "py4web",
+        "py4web>=1.20210522.2",
         "mapbox_vector_tile"
     ]
 )

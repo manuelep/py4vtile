@@ -3,6 +3,7 @@
 import os
 
 from pathlib import Path
+from py4web.core import required_folder
 HOME = str(Path.home())
 
 # db settings
@@ -17,8 +18,11 @@ DB_MIGRATE = True
 # DB_FAKE_MIGRATE = False  # maybe?
 
 # location where to store uploaded files:
-UPLOAD_FOLDER = os.path.join(APP_FOLDER, "uploads")
-STATIC_UPLOAD_FOLDER = os.path.join(APP_FOLDER, "static", "uploads")
+UPLOAD_FOLDER = required_folder(APP_FOLDER, "uploads")
+
+# location where static files are stored:
+STATIC_FOLDER = os.path.join(APP_FOLDER, "static")
+STATIC_UPLOAD_FOLDER = required_folder(STATIC_FOLDER, "uploads")
 
 # logger settings
 LOGGERS = [
